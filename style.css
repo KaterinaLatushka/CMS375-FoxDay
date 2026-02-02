@@ -45,7 +45,7 @@ header.site-header {
   overflow: hidden;
 
   /* colorful band + clean transition into page */
-  border-bottom: 4px solid var(--accent);
+  border-bottom: none;
   background:
     linear-gradient(
       to bottom,
@@ -102,6 +102,23 @@ header.site-header::after {
   text-align: center;
   gap: 12px;
 }
+
+.header-inner{
+  position: relative;              /* needed for ::after */
+  padding-bottom: 26px;            /* gives space for the line */
+}
+
+.header-inner::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 6px;                     /* controls how close it sits to nav */
+  height: 4px;
+  background: var(--accent);
+  border-radius: 999px;
+}
+
 
 .brand {
   display: flex;
