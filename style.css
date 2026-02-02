@@ -46,13 +46,7 @@ header.site-header {
 
   /* colorful band + clean transition into page */
   border-bottom: none;
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(232,106,42,0.22) 0%,
-      rgba(232,106,42,0.22) 62%,
-      var(--bg) 62%
-    );
+  background: none;
 }
 
 /* soft “festival bubbles” */
@@ -103,17 +97,23 @@ header.site-header::after {
   gap: 12px;
 }
 
-.header-inner{
-  position: relative;              /* needed for ::after */
-  padding-bottom: 26px;            /* gives space for the line */
+.header-inner {
+  position: relative;
+  z-index: 2;
+
+  /* ORANGE BACKGROUND BOX */
+  background: rgba(232,106,42,0.22);
+  border-radius: 26px;
+  padding: 32px 24px 34px; /* bottom padding leaves room for line */
 }
 
-.header-inner::after{
+
+.header-inner::after {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 6px;                     /* controls how close it sits to nav */
+  left: 24px;
+  right: 24px;
+  bottom: 10px;
   height: 4px;
   background: var(--accent);
   border-radius: 999px;
