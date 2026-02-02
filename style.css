@@ -328,13 +328,10 @@ header.site-header {
   position: relative;
   overflow: hidden;
   border-bottom: 3px solid var(--border);
-
-  /* Fox Day poster-style background */
-  background:
-    radial-gradient(circle at 20% 25%, rgba(232,106,42,0.30), transparent 55%),
-    radial-gradient(circle at 80% 20%, rgb(212, 106, 20), transparent 60%),
-    radial-gradient(circle at 55% 85%, rgba(232,106,42,0.18), transparent 65%),
-    linear-gradient(180deg, #ffffff 0%, rgba(255,255,255,0.75) 100%);
+  background: #fff;
+  box-shadow:
+    inset 0 -1px 0 rgba(0,0,0,0.05),
+    inset 0 -12px 24px rgba(0,0,0,0.03);
 }
 
 header.site-header::before {
