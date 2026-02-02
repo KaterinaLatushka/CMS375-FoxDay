@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - Fox Day Campus Events</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <h1>Register for a Fox Day Event</h1>
+      <p class="tagline">Pick one adventure. Keep the surprise sacred. 🦊</p>
+    </div>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="events.php">View Events</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="card">
+    <h2>Claim your spot</h2>
+    <p class="small">Fields marked with * are required.</p>
+
+    <form class="form" action="process.php" method="POST">
+      <div class="field">
+        <label for="student_name">Student Name *</label>
+        <input type="text" id="student_name" name="student_name" placeholder="e.g., Jamie Foxworthy" required />
+      </div>
+
+      <div class="field">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" placeholder="e.g., jamie@rollins.edu" required />
+      </div>
+
+      <div class="field">
+        <label for="event">Select an Event *</label>
+        <select id="event" name="event" required>
+          <option value="">-- Choose your Fox Day adventure --</option>
+          <option value="Mystery Destination Bus Ride: NO QUESTIONS ASKED">Mystery Destination Bus Ride: NO QUESTIONS ASKED</option>
+          <option value="Campus Clue Hunt: Follow the Orange Footprints">Campus Clue Hunt: Follow the Orange Footprints</option>
+          <option value="Fox Day Picnic & Lemonade: The Blanket Society">Fox Day Picnic & Lemonade: The Blanket Society</option>
+          <option value="Pop-Up Photo Booth: Fox Ears Edition">Pop-Up Photo Booth: Fox Ears Edition</option>
+          <option value="The Great Fox Finale: Sunset Bell & Secret Treat">The Great Fox Finale: Sunset Bell & Secret Treat</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Year</label>
+        <div class="radio-group">
+          <label class="radio-pill"><input type="radio" name="year" value="Freshman" /> Freshman</label>
+          <label class="radio-pill"><input type="radio" name="year" value="Sophomore" /> Sophomore</label>
+          <label class="radio-pill"><input type="radio" name="year" value="Junior" /> Junior</label>
+          <label class="radio-pill"><input type="radio" name="year" value="Senior" /> Senior</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="message">What are you most excited about?</label>
+        <textarea id="message" name="message" placeholder="Tell us your Fox Day hype..."></textarea>
+      </div>
+
+      <div class="field">
+        <label class="radio-pill" style="display:inline-flex; gap:10px; align-items:center;">
+          <input type="checkbox" name="secret" value="yes" />
+          I promise to keep the Fox Day surprise secret (optional).
+        </label>
+      </div>
+
+      <button class="btn" type="submit">Book My Fox Day Adventure</button>
+      <p class="small">You’ll get an on-screen confirmation right away.</p>
+    </form>
+  </div>
+
+  <div class="footer">
+    <p>Fox Day Rule #2: Act normal. 🦊</p>
+    <p>© Fox Day Campus Events</p>
+  </div>
+</main>
+
+</body>
+</html>
