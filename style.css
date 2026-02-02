@@ -332,7 +332,7 @@ header.site-header {
   /* Fox Day poster-style background */
   background:
     radial-gradient(circle at 20% 25%, rgba(232,106,42,0.30), transparent 55%),
-    radial-gradient(circle at 80% 20%, rgba(46,107,79,0.24), transparent 60%),
+    radial-gradient(circle at 80% 20%, rgb(212, 106, 20), transparent 60%),
     radial-gradient(circle at 55% 85%, rgba(232,106,42,0.18), transparent 65%),
     linear-gradient(180deg, #ffffff 0%, rgba(255,255,255,0.75) 100%);
 }
