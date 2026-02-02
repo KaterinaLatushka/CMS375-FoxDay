@@ -319,3 +319,118 @@ main h2 {
   color: var(--muted);
   font-size: 0.95rem;
 }
+
+/* ===========================
+   CSS-ONLY VIBRANT HEADER
+   =========================== */
+
+header.site-header {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 3px solid var(--border);
+
+  /* Fox Day poster-style background */
+  background:
+    radial-gradient(circle at 20% 25%, rgba(232,106,42,0.30), transparent 55%),
+    radial-gradient(circle at 80% 20%, rgba(46,107,79,0.24), transparent 60%),
+    radial-gradient(circle at 55% 85%, rgba(232,106,42,0.18), transparent 65%),
+    linear-gradient(180deg, #ffffff 0%, rgba(255,255,255,0.75) 100%);
+}
+
+header.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* playful sparkle pattern */
+  background:
+    radial-gradient(circle at 12px 12px, rgba(232,106,42,0.12) 2px, transparent 3px) 0 0 / 44px 44px,
+    radial-gradient(circle at 30px 30px, rgba(46,107,79,0.10) 2px, transparent 3px) 0 0 / 60px 60px;
+
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+header.site-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 28px;
+
+  /* soft fade into page */
+  background: linear-gradient(180deg, rgba(255,255,255,0), var(--bg));
+  pointer-events: none;
+}
+
+.header-inner {
+  position: relative;
+  width: min(900px, 92%);
+  margin: 0 auto;
+  padding: 30px 0 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+/* Center brand block */
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Big expressive title */
+.brand h1 {
+  font-family: Georgia, serif;
+  margin: 0;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: 0.6px;
+
+  /* glow + depth */
+  text-shadow:
+    0 1px 0 rgba(255,255,255,0.85),
+    0 12px 24px rgba(0,0,0,0.12);
+}
+
+/* Tagline emphasis */
+.tagline {
+  margin: 0;
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: rgba(31,31,31,0.78);
+}
+
+/* Center nav + make it feel like badges */
+nav.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 6px;
+}
+
+nav.site-nav a {
+  background: rgba(255,255,255,0.78);
+  border: 1px solid rgba(241,217,198,0.95);
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 900;
+  color: var(--text);
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+  transition: transform 0.15s ease, border-color 0.15s ease, filter 0.15s ease;
+}
+
+nav.site-nav a:hover {
+  transform: translateY(-2px);
+  border-color: rgba(232,106,42,0.75);
+  filter: brightness(0.97);
+  text-decoration: none;
+}
